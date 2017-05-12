@@ -1,7 +1,7 @@
 package net.sansa_stack.examples.spark.rdf
 
-import java.net.{URI => JavaURI}
 
+import java.net.{URI => JavaURI}
 import net.sansa_stack.rdf.spark.io.NTripleReader
 import net.sansa_stack.rdf.spark.model.{JenaSparkRDDOps, TripleRDD}
 import org.apache.spark.sql.SparkSession
@@ -43,7 +43,7 @@ object TripleOps {
     import ops._
 
     val triplesRDD = NTripleReader.load(sparkSession, JavaURI.create(input))
-    
+
     val graph: TripleRDD = triplesRDD
 
     //Triples filtered by subject ( "http://dbpedia.org/resource/Charles_Dickens" )
